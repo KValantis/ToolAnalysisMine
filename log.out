@@ -1,0 +1,74 @@
+[1]: Initializing Tool LoadWCSim
+[1]: LoadWCSim Tool: Assuming RunStartDate of 0ns, i.e. unix epoch
+[1]: creating chain from files /ToolAnalysisLink/Data_Energy_Reco/wcsim_0.1221.*.root
+[1]: constructed wcsimT class from TChain within files /ToolAnalysisLink/Data_Energy_Reco/wcsim_0.1221.7.root
+[1]: Initializing Tool MCRecoEventLoader
+[1]: Initializing Tool DigitBuilder
+[1]: Detectors size: 4
+[1]: Initializing Tool VtxSeedGenerator
+[2]: FindTrackLengthInWater Tool: Initializing
+[3]: FindTrackLengthInWater Tool: max number of hits per event: 1100
+[1]: ConfigurationsFile => configfiles/EnergyReco/Predict/DNNTrackLengthPredictConfig
+[1]: ExecuteFunction => Finalise
+[1]: FinaliseFunction => Execute
+[1]: InitialiseFunction => Initialise
+[1]: PythonScript => DNNFindTrackLengthInWater_test
+2022-05-25 13:35:35.288824: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2022-05-25 13:35:35.312934: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2694750000 Hz
+2022-05-25 13:35:35.314067: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x6345cb0 executing computations on platform Host. Devices:
+2022-05-25 13:35:35.314194: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+[1]: ConfigurationsFile => configfiles/EnergyReco/Predict/BDTMuonEnergyPredictConfig
+[1]: ExecuteFunction => Execute
+[1]: FinaliseFunction => Finalise
+[1]: InitialiseFunction => Initialise
+[1]: PythonScript => BDT_MuonEnergyReco_pred
+[1]: Executing tool LoadWCSim with MC entry 0, trigger 0
+[1]: Genie file is /pnfs/annie/persistent/users/vfischer/genie_files/BNB_Water_10k_22-05-17/, genie event num was 3500
+[1]: Found 13 with parent pdg 0, flag 0 track id 2, start vertex (-0.253590, -0.723260, 0.424662), and end vertex (-5.940000, -2.886459, 4.953801)
+[1]: Trying to get next event, MCEventNum: 1, nbytesread: 72060
+[1]: MCRecoEventLoader::  Tool: No primary pions in this event
+[1]: MCRecoEventLoader::  Tool: No kaons in this event
+[1]: MCRecoEventLoader: Found 1 rings in this event, from 8 primary particles and 5 secondary particles.
+[1]: ClusterFinder: RecoADCHits Store does not exist and is not read out
+[1]: EventSelector tool: Read in MuonStop (X,Y,Z) = (-594.000000,-274.181215,327.280127)
+[0]: EventSelector Tool: Error retrieving MrdTimeClusters map from CStore, did you run TimeClustering beforehand?
+[2]: FindTrackLengthInWater Tool: Executing
+[2]: FindTrackLengthInWater Tool: Event did not pass the reconstruction selection cuts, skipping
+Call to Python Execute failed
+[0]: WARNING !!!!!! BDTMuonEnergyPredict Failed to execute (error code)
+
+[1]: Executing tool LoadWCSim with MC entry 1, trigger 0
+[1]: Genie file is /pnfs/annie/persistent/users/vfischer/genie_files/BNB_Water_10k_22-05-17/, genie event num was 3501
+[1]: Found 13 with parent pdg 0, flag 0 track id 2, start vertex (0.861962, -1.351263, 1.230704), and end vertex (0.288258, -1.082813, 1.382838)
+[1]: Trying to get next event, MCEventNum: 2, nbytesread: 158628
+[1]: MCRecoEventLoader::  Tool: No primary pions in this event
+[1]: MCRecoEventLoader::  Tool: No kaons in this event
+[1]: MCRecoEventLoader: Found 1 rings in this event, from 4 primary particles and 17 secondary particles.
+[1]: ClusterFinder: RecoADCHits Store does not exist and is not read out
+[1]: EventSelector tool: Read in MuonStop (X,Y,Z) = (28.825769,-93.816621,-29.816202)
+[0]: EventSelector Tool: Error retrieving MrdTimeClusters map from CStore, did you run TimeClustering beforehand?
+[2]: FindTrackLengthInWater Tool: Executing
+[2]: FindTrackLengthInWater Tool: Event did not pass the reconstruction selection cuts, skipping
+Call to Python Execute failed
+[0]: WARNING !!!!!! BDTMuonEnergyPredict Failed to execute (error code)
+
+[1]: Executing tool LoadWCSim with MC entry 2, trigger 0
+[1]: Genie file is /pnfs/annie/persistent/users/vfischer/genie_files/BNB_Water_10k_22-05-17/, genie event num was 3502
+[1]: Found 13 with parent pdg 0, flag 0 track id 1, start vertex (-0.445713, -0.049275, 1.193857), and end vertex (0.537343, 0.281853, 2.823360)
+[1]: MCRecoEventLoader::  Tool: No primary pions in this event
+[1]: MCRecoEventLoader::  Tool: No kaons in this event
+[1]: MCRecoEventLoader: Found 1 rings in this event, from 4 primary particles and 27 secondary particles.
+[1]: ClusterFinder: RecoADCHits Store does not exist and is not read out
+[1]: EventSelector tool: Read in MuonStop (X,Y,Z) = (53.734291,42.650027,114.235968)
+[0]: EventSelector Tool: Error retrieving MrdTimeClusters map from CStore, did you run TimeClustering beforehand?
+[2]: FindTrackLengthInWater Tool: Executing
+[2]: FindTrackLengthInWater Tool: Event did not pass the reconstruction selection cuts, skipping
+
+ *** Break *** segmentation violation
+[1]:  Generating stack trace...
+ 0x00007ff52b19f0d7 in ToolChain::Execute(int) at /ToolAnalysisLink/ToolDAQ/ToolDAQFramework/src/ToolChain/ToolChain.cpp:298 from /ToolAnalysisLink/lib/libToolChain.so
+ 0x00007ff52b1a3429 in ToolChain::ToolChain(std::basic_string<char, std::char_traits<char>, std::allocator<char> >) at /ToolAnalysisLink/ToolDAQ/ToolDAQFramework/src/ToolChain/ToolChain.cpp:91 from /ToolAnalysisLink/lib/libToolChain.so
+ 0x0000000000429692 in main at /usr/include/c++/4.8.2/bits/basic_string.h:539 from ./Analyse
+ 0x00007ff51c192555 in __libc_start_main + 0xf5 from /lib64/libc.so.6
+ 0x000000000042b35e in <unknown> from ./Analyse
+[1]: 
